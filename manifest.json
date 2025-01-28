@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "QA Logger Extension",
+  "name": "Tr4cer Log",
   "version": "1.0",
-  "description": "Monitora console.logs da aplicação para QA.",
+  "description": "Monitora console.logs da aplicação para validações de QA",
   "permissions": [
     "scripting",
     "activeTab"
@@ -25,7 +25,13 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_icon": "icon.png"
+    "default_icon": "icons/icon.png"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "content_scripts": [
     {

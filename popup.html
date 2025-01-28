@@ -3,31 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QA Logger</title>
+    <title>Tr4cer Log</title>
+    <link rel="stylesheet" href="milligram.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- <div>
-      <header>
-        <h1>QA Logger</h1>
-        <button id="clear-logs">Limpar Logs</button>
-      </header>
-      <div>
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Pesquisar logs..."
-          autocomplete="off"
-        />
+    <div id="wrapper">
+      <div class="app-header">
+        <header>
+          <h3>Tr4cer Log <span id="logs-count"></span></h3>
+          <a class="button-clear" id="clear-logs" type="menu">Limpar Logs</a>
+        </header>
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Pesquisar logs..."
+            autocomplete="off"
+          />
+        </div>
       </div>
-    </div> -->
-    <div id="logs-container">
-      <p id="instructions">
-        Bem vindo! Seu log irá aparecer aqui quando ele for disparado.
-        <br />
-        Para que isso aconteceça você deve dispar logs no console do navegador
-        começando/contendo com a string <b>">> Log Track:"</b>
-      </p>
+      <div id="logs-container">
+        <p id="instructions">
+          <span>Bem vindo ao <b>Tr4cer Log</b>! </span>
+          <span>Seu log irá aparecer aqui quando ele for interceptado</span>
+        </p>
+      </div>
     </div>
     <script src="popup.js"></script>
   </body>
