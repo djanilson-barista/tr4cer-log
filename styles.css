@@ -67,7 +67,6 @@ body {
 }
 
 .log-item {
-  padding: 5px;
   margin-bottom: 5px;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -75,16 +74,26 @@ body {
 }
 
 .log-header {
+  /* height: 100%; */
+  padding: 5px;
   cursor: pointer;
   font-weight: bold;
   font-size: 12px;
   color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+.log-header small {
+  color: silver;
 }
 
 .log-details {
   display: none;
   margin-top: 10px;
   padding: 10px;
+  margin: 8px;
+  margin-top: 0;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
 }
