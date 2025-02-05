@@ -2,6 +2,9 @@
 
 Este guia explica como instalar e rodar a extensão em **modo desenvolvedor** no Google Chrome.
 
+
+<img src="https://github.com/user-attachments/assets/0527cab6-3fed-477b-b02e-5b7b12657180" width="600">
+
 ---
 
 ## 📌 Passo 1: Baixar a Extensão
