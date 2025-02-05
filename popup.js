@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function onDOMContentLoaded() {
 
   function renderLogs() {
     _container.innerHTML = "";
+
+    // lista de logs a serem renderizados (filtrados ou não)
     const list = _inSearch ? _filteredMsgs : _msgsReceived;
 
     if (list.length === 0) {
@@ -136,7 +138,18 @@ document.addEventListener("DOMContentLoaded", function onDOMContentLoaded() {
         },
       ],
     ];
+
     renderLogs();
+  }
+
+  function handleClearLogs({ target }) {
+    if (target.id === "clear-logs") {
+      _msgsReceived.length = 0;
+      _filteredMsgs.length = 0;
+      _inSearch = false;
+
+      renderLogs();
+    }
   }
 
   const _debuggerMode = false;
@@ -149,12 +162,6 @@ document.addEventListener("DOMContentLoaded", function onDOMContentLoaded() {
   }
 
   document.addEventListener("click", handleLogHeaderClick);
-  document.addEventListener("click", ({ target }) => {
-    if (target.id === "clear-logs") {
-      _msgsReceived.length = 0;
-      renderLogs();
-    }
-  });
-
+  document.addEventListener("click", handleClearLogs);
   document.addEventListener("keyup", handleSearch);
 });
